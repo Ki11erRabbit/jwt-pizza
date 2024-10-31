@@ -81,7 +81,6 @@ jobs:
   release:
     needs:
       - build
-      - deploy
     runs-on: ubuntu-latest
     steps:
       - name: Create Release
@@ -97,3 +96,4 @@ jobs:
             ${{ github.event.head_commit.message }}
 
             **commit**: ${{ github.sha }}
+      
